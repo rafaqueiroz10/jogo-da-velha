@@ -1,0 +1,58 @@
+.modal-configuracoes, .modal-configuracoes main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.modal-configuracoes main {
+    align-items: center;
+    gap: 3vh;
+}
+
+.modal-configuracoes header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.modal-configuracoes {
+    justify-content: space-evenly;
+    background-color: #e7e7e7e5;
+    height: 25vh;
+    width: 45vh;
+    z-index: 3;
+    position: fixed;
+    left: 50%;
+    top: 50%;  
+    transform: translate(-50%, -50%);
+    border-radius: 1vh;
+}
+
+.modal-configuracoes #titulo {
+    font-size: 3.5vh;
+    color: black;
+    font-weight: bold;
+}
+
+#fechar-configuracoes {
+    position: relative;
+    bottom: 2vh;
+    left: 4vh;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 3vh;
+    color: #fffdfd;
+    padding-right: 1vh;
+    padding-left: 1vh;
+    border: 0.3vh solid white;
+    cursor: pointer;
+    font-weight: bold;
+    width: 2vh;
+}
+
+input[type="range"] {
+    background-color: black;
+    cursor: pointer;
+    border-radius: 0.5vh;
+    width: 28vh;
+}

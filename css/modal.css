@@ -1,0 +1,43 @@
+/* Estilos separados para a janela modal. */
+@keyframes revelar {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes esconder {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.transicao-fechar-modal {
+    animation: esconder 1.5s ease 1s 1;
+}
+
+.transicao-abrir-modal {
+    animation: revelar 1s ease 0s 1;
+}
+
+.capa-escura-modal {
+    content: "";
+    position: fixed;
+    top: 6vh;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.esconder-na-capa {
+    opacity: 0.2;
+}
