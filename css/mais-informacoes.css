@@ -1,0 +1,18 @@
+.modal-informacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d9d9d9;
+    align-items: center;
+    background-color: #e7e7e7e5;
+    z-index: 3;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1vh;
+    height: 33em;
+    width: 45em;
+    padding-left: 1em;
+    padding-top: 1em;
+}
