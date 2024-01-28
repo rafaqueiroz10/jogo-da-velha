@@ -1,3 +1,0 @@
-botaoComecarEl.addEventListener ('click', () => {
-    
-});
