@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/configuracoes.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/mais-informacoes.css">
+    <link rel="stylesheet" href="css/jogo.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+    <header id="cabecalho-principal">
+        <h2 id="titulo-do-jogo">Tic Tac Toe</h2>
+        <nav>
+            <ul id="links-menu">
+                <li id="link-informacoes">ⓘ</li>
+                <li id="link-configuracoes">⚙️</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="comecar-jogo">
+            <button id="comecar">Começar</button>
+        </section>
+
+        <section class="jogo">
+            <div class="placar">
+                <div id="nome-bolinha"></div>
+                <div class="bolinha">
+                    <span id="bolinha">O</span>
+                    <span id="vitorias-bolinha">0</span>
+                </div>
+                <span id="versus">
+                    <p>🆚</p>
+                </span>
+                <div class="x">
+                    <span id="vitorias-x">0</span>
+                    <span id="x">X</span>
+                </div>
+                <div id="nome-x"></div>
+            </div>
+            <div class="tabuleiro">
+                <div class="linha">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="linha">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="linha">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modal-continuar-ou-sair-do-jogo">
+            <div id="texto-continuar">
+                <p>Deseja continuar?</p>
+            </div>
+            <!-- reiniciar == continuar -->
+            <div id="sair-ou-continuar">
+                <button id="sair-do-jogo">⇦</button>
+                <button id="continuar-jogo">✔</button>
+            </div>
+        </section>
+
+        <section class="modal-salvar-ou-descartar-progresso">
+            <div id="texto-salvar">
+                <p>Deseja salvar sua partida?</p>
+            </div>
+            <div id="excluir-ou-salvar-progresso">
+                <button id="excluir-progresso">X</button>
+                <button id="salvar-progresso">✔</button>
+            </div>
+        </section>
+
+        <section class="modal-recuperar-progresso">
+            <div id="texto-recuperar">
+                <p>Deseja recuperar seu jogo salvo? Se recusar, seu
+                    jogo será excluído.
+                </p>
+            </div>
+            <div id="botao-recuperar-e-botao-nao-recuperar-progresso">
+                <button id="nao-recuperar-progresso">X</button>
+                <button id="botao-recuperar-progresso">✔</button>
+            </div>
+        </section>
+
+        <section class="modal-vs-amigo">
+            <div id="texto-escolher-opcao">
+                <p>Digite seu nome e escolha uma opção:</p>
+            </div>
+            <div id="nomes">
+                <input id="nome-jogador-um" maxlength="11" type="text" placeholder="Nome 1">
+                <input id="nome-jogador-dois" maxlength="11" type="text" placeholder="Nome 2">
+            </div>
+            <div id="escolher-bolinha-ou-x">
+                <div id="jogador-um">
+                    <span class="bolinha">O</span>
+                    <span class="x">X</span>
+                </div>
+                <span id="versus">
+                    <p>⚔️</p>
+                </span>
+                <div id="jogador-dois">
+                    <span class="bolinha">O</span>
+                    <span class="x">X</span>
+                </div>
+            </div>
+            <div id="jogar">
+                <button id="jogar-vs-amigo">► Jogar</button>
+            </div>
+        </section>
+
+        <section class="modal-informacoes">
+            <article id="informacoes-jogo">
+                <header>
+                    <span id="titulo-sobre-o-projeto">Sobre o projeto</span>
+                    <span id="fechar-modal-informacoes">X</span>
+                </header>
+                <main id="informacoes">
+                    <p>Tic Tac Toe é um projeto desenvolvido por Rafael
+                        Queiroz para, sobretudo, demonstrar seus
+                        conhecimentos em HTML, CSS e JavaScript.
+                    </p>
+                    <p>O jogo é disposto em um tabuleiro com três linhas e três colunas. Cada jogador escolhe um símbolo
+                        - O ou X - e devem inserí-los no tabuleiro
+                        alternadamente. O objetivo é muito simples: é necessário colocar três elementos iguais dispostos
+                        em uma mesma linha, coluna ou diagonal.
+                        Caso o tabuleiro esteja todo preenchido e o jogo não tenha um vencedor conforme descrito acima,
+                        diz-se que o jogo "deu velha" ou empate.
+                    </p>
+                    <p>A página possui uma música de fundo antes do jogo, bastante agradável. No jogo, a cada click na
+                        célula do tabuleiro, há um som indicando que o elemento foi inserido. Além disso, ela permite
+                        salvar e recuperar localmente o placar e os nomes dos dois jogadores, além de também salvar
+                        localmente o volume definido nas configurações⚙️.
+                    </p>
+                </main>
+                </article>
+                <article id="autores">
+                    <header>
+                        <span id="titulo-autores">Autores</span>
+                    </header>
+                    <main id="autor-rafael">
+                        <div id="perfil">
+                            <img id="foto-rafael" src="imagens/foto-rafael.jpg" alt="Foto do único autor da página, Rafael Queiroz">
+                            <h2 id="nome-rafael">Rafael</h2>
+                            <a href="https://github.com/rafaqueiroz10"><img id="github" src="imagens/github.jpg" alt="Link do Github do autor Rafael"></a>
+                        </div>
+                        <div id="descricao">
+                            <p>Olá, meu nome é Rafael Queiroz Vilaça, tenho 17 anos
+                                e estou, em 2024, no 2º ano do curso técnico em Informática no Cefet-MG.
+                                Um dos apelidos é Rafa ou Queiroz. Sou o único dev da página.
+                            </p>
+                            <p>Desde 2022, comecei a programar e, desde o primeiro dia, apesar dos desafios, tenho gostado e com cada vez mais prazer em programar. </p>
+                            <p>Programo em diversas linguagens, tanto Front-end Web (HTML, CSS e JavaScript) quanto as linguagens C e Python. Participo também das olímpiadas
+                                de conhecimento de nível nacional, como matemática e informática.
+                            </p>
+                            <p>No tempo livre, gosto bastante de jogar joguinhos online, além de praticar esportes como vôlei e futebol.
+                                Sou muito fã de jogar o jogo da velha, que jogo desde criança, o que me inspirou a fazer esse site com o jogo.
+                            </p>
+                            <p>Espero que tenham gostado :). Divirtam-se!!! </p>
+                        </div>
+                    </main>
+                </article>
+            </article>
+        </section>
+
+        <section class="modal-configuracoes">
+            <header>
+                <span id="titulo">Configurações</span>
+                <span id="fechar-configuracoes">X</span>
+            </header>
+            <main>
+                <div id="musica">
+                    <span id="icone-alto-falante">
+                        <!-- Icone abaixo faz parte da biblioteca do bootstrap -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-megaphone-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06" />
+                        </svg>
+                    </span>
+                    <input id="volume-toque" type="range" min="0" max="100" value="100">
+                </div>
+                <div id="toque">
+                    <span id="icone-nota-musical">🎵</span>
+                    <input id="volume-da-musica" type="range" min="0" max="100" value="100">
+                </div>
+            </main>
+        </section>
+    </main>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/configuracoes.js"></script>
+    <script src="scripts/jogo.js"></script>
+    <script src="scripts/mais-informacoes.js"></script>
+    <script src="scripts/trilha-sonora.js"></script>
+</body>
+
+</html>
