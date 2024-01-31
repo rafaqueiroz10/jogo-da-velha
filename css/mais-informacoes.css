@@ -1,0 +1,125 @@
+.modal-informacoes {
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    align-items: center;
+    background-color: #e7e7e7e5;
+    z-index: 3;
+    position: fixed;
+    left: 50%;
+    top: 25.5em;
+    transform: translate(-50%, -50%);
+    border-radius: 1vh;
+    height: 35em;
+    width: 44em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: justify;
+}
+
+.modal-informacoes::-webkit-scrollbar {
+    width: 0.8vh;
+}
+
+.modal-informacoes::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 1vh;
+}
+
+.modal-informacoes {
+    scrollbar-width: thin;
+}
+
+.modal-informacoes::-moz-scrollbar-thumb {
+    background-color: #555; 
+}
+
+#informacoes-jogo header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#fechar-modal-informacoes {
+    color: white;
+    width: 4.5vh;
+    height: 4.5vh;
+    font-size: 3.5vh;
+    border-radius: 50% 50%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: red;
+    text-align: center;
+    position: relative;
+    bottom: 0.2em;
+}
+
+#titulo-sobre-o-projeto {
+    position: relative;
+    top: 0.5em;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#informacoes {
+    position: relative;
+    top: 1em;
+}
+
+#autores header {
+    display: flex;
+    justify-content: center;
+}
+
+#titulo-autores {
+    position: relative;
+    top: 1.35em;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+#foto-rafael {
+    width: 8em;
+    height: 9em;
+    border-radius: 20em 20em;
+    position: relative;
+    top: 2vh;
+}
+
+#autor-rafael {
+    display: flex;
+    flex-direction: row;
+    gap: 3vh;
+    position: relative;
+    top: 2.5em;
+}
+
+#nome-rafael {
+    font-size: 1.3em;
+}
+
+#perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+#github {
+    width: 2em;
+    height: 2em;
+}
+
+@media (width <= 767px) {
+    .modal-informacoes {
+        width: 70%;
+    }
+    #autor-rafael {
+        gap: 5%;
+    }
+    #descricao {
+        text-align: left;
+    }
+}

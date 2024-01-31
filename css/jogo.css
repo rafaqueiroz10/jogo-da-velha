@@ -1,0 +1,316 @@
+.placar #nome-bolinha, .placar .bolinha,
+.placar #nome-x, .placar .x,
+.placar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.2em;
+}
+
+.placar {
+    height: 30vh;
+}
+
+.placar #nome-bolinha, .placar .bolinha,
+.placar #nome-x, .placar .x {
+    background-color: #d9d9d9;
+    height: 8vh;
+    width: 18vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#bolinha,
+#x {
+    font-size: 7vh;
+}
+
+#bolinha,
+.bolinha {
+    color: #ff3131;
+}
+
+#x,
+.x {
+    color: #5e17eb;
+}
+
+#vitorias-bolinha,
+#vitorias-x {
+    font-size: 4.5vh;
+    color: green;
+}
+
+.linha {
+    display: grid;
+    gap: 0.5%;
+    grid-template-columns: repeat(3, 17vh);
+    grid-template-rows: 95% 95% 95%;
+    justify-content: center;
+    height: 19vh;
+}
+
+.linha div {
+    background-color: #d9d9d9;
+    border-radius: 1vh;
+    font-size: 12vh;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+
+.modal-continuar-ou-sair-do-jogo,
+.modal-salvar-ou-descartar-progresso,
+.modal-vs-amigo,
+.modal-recuperar-progresso {
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #e7e7e7e5;
+    z-index: 3;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1vh;
+}
+
+.modal-continuar-ou-sair-do-jogo {
+    width: 25vh;
+    height: 15vh;
+}
+
+.modal-salvar-ou-descartar-progresso {
+    width: 35vh;
+    height: 16vh;
+}
+
+#sair-do-jogo,
+#excluir-progresso,
+#nao-recuperar-progresso {
+    background-color: red;
+}
+
+#continuar-jogo,
+#salvar-progresso,
+#botao-recuperar-progresso {
+    background-color: #00bf63;
+    font-weight: bold;
+}
+
+#sair-do-jogo,
+#continuar-jogo,
+#salvar-progresso,
+#excluir-progresso,
+#botao-recuperar-e-botao-nao-recuperar-progresso button {
+    color: white;
+    width: 5vh;
+    height: 5vh;
+    font-size: 3vh;
+    border-radius: 50% 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#sair-ou-continuar,
+#excluir-ou-salvar-progresso {
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+    position: relative;
+    bottom: 1vh;
+}
+
+.marcar-opcao {
+    background-color: rgba(209, 200, 200, 0.937);
+    border-radius: 1vh 1vh;
+    height: 1.4em;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+.modal-vs-amigo {
+    width: 15em;
+    height: 13em;
+    font-size: 3vh;
+}
+
+.modal-vs-amigo #escolher-bolinha-ou-x {
+    display: flex;
+    flex-direction: row;
+    gap: 3vh;
+    position: relative;
+    top: 1.5vh;
+}
+
+#texto-escolher-opcao {
+    position: relative;
+    bottom: 0.5vh;
+    padding-left: 4vh;
+}
+
+#jogador-um,
+#jogador-dois {
+    display: flex;
+    gap: 1.5vh;
+    font-size: 7vh;
+    cursor: pointer;
+}
+
+#jogar-vs-amigo {
+    position: relative;
+    width: 5em;
+    height: 2em;
+    font-size: 2.3vh;
+    cursor: pointer;
+    left: 5em;
+    bottom: 1em;
+    border-radius: 1vh 1vh;
+}
+
+#versus {
+    font-size: 4vh;
+    position: relative;
+    top: 0.65em;
+}
+
+@keyframes circular {
+    0% {
+        border: 0.3vh solid black;
+    }
+
+    25% {
+        border: 0.3vh solid transparent;
+    }
+
+    50% {
+        border: 0.3vh solid black;
+    }
+
+    75% {
+        border: 0.3vh solid transparent;
+    }
+
+    100% {
+        border: 0.3vh solid black;
+    }
+}
+
+.marcar-vez {
+    position: relative;
+    animation: circular 0.6s 0.7s ease infinite alternate;
+    animation: circular 0.6s 0.7s ease infinite alternate;
+}
+
+.modal-recuperar-progresso {
+    height: 8em;
+    width: 20em;
+}
+
+#texto-recuperar {
+    margin-left: 3vh;
+}
+
+#botao-recuperar-e-botao-nao-recuperar-progresso {
+    display: flex;
+    flex-direction: row;
+    gap: 7em;
+    position: relative;
+    bottom: 0.3em;
+}
+
+@keyframes expandir {
+    from {
+        font-size: 12vh;
+    }
+    to {
+        font-size: 13.5vh;
+    }
+}
+
+@keyframes retrair {
+    from {
+        font-size: 13.5vh;
+    }
+    to {
+        font-size: 12vh;
+    }
+}
+
+.expandir-retrair {
+    animation: expandir 600ms ease-in 0.5s 6 alternate, retrair 600ms ease-in 0.5s 3 alternate;
+}
+
+#nomes {
+    display: flex;
+    flex-direction: row;
+    gap: 7vh;
+    position: relative;
+    bottom: 0.5vh;
+}
+
+#nomes input {
+    font-size: 2.5vh;
+    width: 14vh;
+    height: 4vh;
+    text-align: center;
+}
+
+#espaco-x #nome-x, #espaco-bolinha #nome-bolinha {
+    height: 2em;
+    width: 100%;
+} 
+
+#nome-bolinha {
+    color: red;
+}
+
+#nome-x {
+    color:#5e17eb;
+}
+
+#escolher-bolinha-ou-x #versus p {
+    position: relative;
+    bottom: 2em;
+    font-size: 1.2em;
+}
+
+#espaco-bolinha, #espaco-x {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+@media (width <= 767px) {
+    #comecar {
+        width: 50%;
+    }
+}
+
+@media (320px <= width <= 360px) {
+    .placar {
+        gap: 1.2em;
+    }
+}
+
+@media (width < 320px) {
+    .placar {
+        gap: 0.5em;
+    }
+}
+
+@media (370px < width <= 400px) {
+    .linha {
+        gap: 0.2em;
+        grid-template-columns: 26% 26% 26%;
+    }
+}
+
+@media (300px <= width <= 400px) {
+    .linha {
+        gap: 0.2em;
+        grid-template-columns: 30% 30% 30%;
+    }
+}
