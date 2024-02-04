@@ -1,5 +1,5 @@
-<a href="https://rafaqueiroz10.github.io/jogo-da-velha/">Jogo da Velha</a>
-<a href="https://rqueiroz.my.canva.site/jogo-da-velha">Estilos no Canva</a>
+<p> Link do jogo: <a href="https://rafaqueiroz10.github.io/jogo-da-velha/">Jogo da Velha</a></p>
+<p> Link do Canva: <a href="https://rqueiroz.my.canva.site/jogo-da-velha">Estilos no Canva</a></p>
 <h2>Modo de jogo</h2>
 <ul>
   <li>Jogador X Jogador;</li>
