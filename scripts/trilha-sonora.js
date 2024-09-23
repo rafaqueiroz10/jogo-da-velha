@@ -16,9 +16,9 @@ function recuperarVolume() {
 }
 
 botaoComecarEl.addEventListener('click', () => {
-    if (!estaOculto(maisInformacoes.modalEl)) {
+    if (!estaOculto(maisInformacoes.modalEl)) 
         return;
-    }
+
     audioInicial.play();
     recuperarVolume();
 });
@@ -45,10 +45,8 @@ function reproduzir(audio) {
 
 for (let celulaEl of arrCelulasEl) {
     celulaEl.addEventListener('click', () => {
-        if (temVencedor) {
-            if ((vitoriasX === 1 && vitoriasBolinha === 7) || (vitoriasX === 7 || vitoriasBolinha === 1)) {
-                reproduzir(narracaoGolDaAlemanha);
-            }
-        }
+        if (temVencedor && (vitoriasX === 1 && vitoriasBolinha === 7) || (vitoriasX === 7 && vitoriasBolinha === 1)) 
+            reproduzir(narracaoGolDaAlemanha);
+    
     });
 }
