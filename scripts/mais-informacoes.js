@@ -7,14 +7,14 @@ let maisInformacoes = {
 maisInformacoes.modalEl.classList.add ('ocultar');
 
 maisInformacoes.linkEl.addEventListener ('click', () => {
-    redefineValorDoCursorDaPartida ('auto');
-    fecharModal (configuracoes.modalEl);
-    abrirModal (maisInformacoes.modalEl);
+    redefineValorCursorPartida ('auto');
+    fecharModal(configuracoes.modalEl);
+    abrirModal(maisInformacoes.modalEl);
 });
 
 maisInformacoes.botaoFecharModalEl.addEventListener ('click', () => {
-    redefineValorDoCursorDaPartida ('pointer');
-    fecharModal (maisInformacoes.modalEl);
+    redefineValorCursorPartida ('pointer');
+    fecharModal(maisInformacoes.modalEl);
 });
 
 configuracoes.botaoAbrirEl.addEventListener ('click', () => {
