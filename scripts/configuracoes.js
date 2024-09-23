@@ -17,6 +17,7 @@ configuracoes.botaoAbrirEl.addEventListener ('click', () => {
     abrirModal(configuracoes.modalEl);
 });
 
+// função para salvar o volume da música no localStorage
 function salvarVolume() {
     if (localStorage.getItem ('volume-da-musica') !== null) 
         localStorage.removeItem ('volume-da-musica');

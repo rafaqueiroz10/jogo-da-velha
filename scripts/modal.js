@@ -1,3 +1,4 @@
+// função para abrir o modal
 function abrirModal(modalEl) {
     modalEl.classList.remove('ocultar');
     mainPrincipalEl.classList.add('capa-escura-modal');
@@ -9,6 +10,7 @@ function abrirModal(modalEl) {
     }
 }
 
+// função para fechar o modal
 function fecharModal(modalEl) {
     modalEl.classList.add('ocultar');
     mainPrincipalEl.classList.remove('capa-escura-modal');

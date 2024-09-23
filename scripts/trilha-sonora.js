@@ -2,6 +2,7 @@ let audioInicial = new Audio("audios/audio-inicial.mp3"),
     clickNaCelula = new Audio ("audios/click-na-celula.mp3"),
     narracaoGolDaAlemanha = new Audio ("audios/narracao-gol-da-alemanha");
 
+// função para recuperar o volume salvo no localStorage
 function recuperarVolume() {
     if (localStorage.getItem('volume-da-musica') !== null) {
         configuracoes.volume.musicaEl.value = localStorage.getItem('volume-da-musica');
@@ -27,6 +28,7 @@ botaoRecuperarProgressoEl.addEventListener('click', () => {
     audioInicial.pause();
 });
 
+// função para reproduzir a música
 function reproduzir(audio) {
     audio.currentTime = 0;
     audio.play();
