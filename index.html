@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/mais-informacoes.css">
     <link rel="stylesheet" href="css/jogo.css">
-    <link rel="icon" href="imagens/icone.jpg">
+    <link rel="icon" href="imagens/icone.png">
     <title>Jogo da Velha</title>
 </head>
 
@@ -26,6 +26,10 @@
 
     <main class="conteudo-principal">
         <section class="comecar-jogo">
+            <div id="qr-code">
+                <p>Aponte para o QR Code para<br> acessar no seu celular: </p>
+                <img id="img-qr-code" src="" alt="">
+            </div>
             <button id="comecar">Começar</button>
         </section>
 
@@ -211,11 +215,13 @@
             </main>
         </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.min.js"></script>
     <script src="scripts/modal.js"></script>
     <script src="scripts/configuracoes.js"></script>
     <script src="scripts/jogo.js"></script>
     <script src="scripts/mais-informacoes.js"></script>
     <script src="scripts/trilha-sonora.js"></script>
+    <script src="scripts/qr-code.js"></script>
 </body>
 
 </html>
