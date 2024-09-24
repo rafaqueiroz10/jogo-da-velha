@@ -215,71 +215,71 @@ vez = primeiroAComecar;
 let vitoriasBolinha = 0, vitoriasX = 0;
 let temVencedor;
 
-// controla todo o jogo
-function jogo(e) {
-    // função para validar as linhas do tabuleiro
-    function verificarLinhas() {
-        for (let i = 0; i < 3; i++) {
-            if (tabuleiro[i][0].innerHTML === vez && tabuleiro[i][1].innerHTML === vez && tabuleiro[i][2].innerHTML === vez) {
-                tabuleiro[i][0].classList.add('expandir-retrair');
-                tabuleiro[i][1].classList.add('expandir-retrair');
-                tabuleiro[i][2].classList.add('expandir-retrair');
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // função para validar as colunas do tabuleiro
-    function verificarColunas() {
-        for (let j = 0; j < 3; j++) {
-            if (tabuleiro[0][j].innerHTML === vez && tabuleiro[1][j].innerHTML === vez && tabuleiro[2][j].innerHTML === vez) {
-                tabuleiro[0][j].classList.add('expandir-retrair');
-                tabuleiro[1][j].classList.add('expandir-retrair');
-                tabuleiro[2][j].classList.add('expandir-retrair');
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // função para validar as diagonais do tabuleiro
-    function verificarDiagonais() {
-        if (tabuleiro[0][0].innerHTML === vez && tabuleiro[1][1].innerHTML === vez && tabuleiro[2][2].innerHTML === vez) {
-            tabuleiro[0][0].classList.add('expandir-retrair');
-            tabuleiro[1][1].classList.add('expandir-retrair');
-            tabuleiro[2][2].classList.add('expandir-retrair');
+// função para validar as linhas do tabuleiro
+function verificarLinhas() {
+    for (let i = 0; i < 3; i++) {
+        if (tabuleiro[i][0].innerHTML === vez && tabuleiro[i][1].innerHTML === vez && tabuleiro[i][2].innerHTML === vez) {
+            tabuleiro[i][0].classList.add('expandir-retrair');
+            tabuleiro[i][1].classList.add('expandir-retrair');
+            tabuleiro[i][2].classList.add('expandir-retrair');
             return true;
         }
-        if (tabuleiro[0][2].innerHTML === vez && tabuleiro[1][1].innerHTML === vez && tabuleiro[2][0].innerHTML === vez) {
-            tabuleiro[0][2].classList.add('expandir-retrair');
-            tabuleiro[1][1].classList.add('expandir-retrair');
-            tabuleiro[2][0].classList.add('expandir-retrair');
+    }
+    return false;
+}
+
+// função para validar as colunas do tabuleiro
+function verificarColunas() {
+    for (let j = 0; j < 3; j++) {
+        if (tabuleiro[0][j].innerHTML === vez && tabuleiro[1][j].innerHTML === vez && tabuleiro[2][j].innerHTML === vez) {
+            tabuleiro[0][j].classList.add('expandir-retrair');
+            tabuleiro[1][j].classList.add('expandir-retrair');
+            tabuleiro[2][j].classList.add('expandir-retrair');
             return true;
         }
-        return false;
     }
+    return false;
+}
 
-    // função que incrementa o número de vitorias da peça vencedora
-    function setVitorias(pecaVencedora) {
-        if (pecaVencedora === 'O') {
-            vitoriasBolinha++;
-            vitoriasBolinhaEl.innerHTML = vitoriasBolinha;
-        }
-        else {
-            vitoriasX++;
-            vitoriasXEl.innerHTML = vitoriasX;
-        }
-    }
-
-    function empate() {
-        for(let celulaEl of arrCelulasEl)
-            if(celulaEl.innerHTML === ' ')
-                return false;
-
+// função para validar as diagonais do tabuleiro
+function verificarDiagonais() {
+    if (tabuleiro[0][0].innerHTML === vez && tabuleiro[1][1].innerHTML === vez && tabuleiro[2][2].innerHTML === vez) {
+        tabuleiro[0][0].classList.add('expandir-retrair');
+        tabuleiro[1][1].classList.add('expandir-retrair');
+        tabuleiro[2][2].classList.add('expandir-retrair');
         return true;
     }
+    if (tabuleiro[0][2].innerHTML === vez && tabuleiro[1][1].innerHTML === vez && tabuleiro[2][0].innerHTML === vez) {
+        tabuleiro[0][2].classList.add('expandir-retrair');
+        tabuleiro[1][1].classList.add('expandir-retrair');
+        tabuleiro[2][0].classList.add('expandir-retrair');
+        return true;
+    }
+    return false;
+}
 
+// função que incrementa o número de vitorias da peça vencedora
+function setVitorias(pecaVencedora) {
+    if (pecaVencedora === 'O') {
+        vitoriasBolinha++;
+        vitoriasBolinhaEl.innerHTML = vitoriasBolinha;
+    }
+    else {
+        vitoriasX++;
+        vitoriasXEl.innerHTML = vitoriasX;
+    }
+}
+
+function empate() {
+    for(let celulaEl of arrCelulasEl)
+        if(celulaEl.innerHTML === ' ')
+            return false;
+
+    return true;
+}
+
+// controla todo o jogo
+function jogo(e) {
     let celulaRecuperadaEl = e.currentTarget;
 
     if (celulaRecuperadaEl.innerHTML !== '' || temVencedor || !estaOculto(configuracoes.modalEl)
@@ -298,6 +298,7 @@ function jogo(e) {
 
     temVencedor = (verificarLinhas() || verificarColunas() || verificarDiagonais());
     let tempoDeAtraso;
+
     if (temVencedor || empate()) {
         if (temVencedor) {
             let vencedor = vez;
@@ -306,6 +307,7 @@ function jogo(e) {
         tempoDeAtraso = (temVencedor) ? 5000 : 50;
         configuracoes.botaoAbrirEl.classList.add('hidden');
         maisInformacoes.linkEl.classList.add('hidden');
+
         setTimeout(() => {
             for (let celulaEl of arrCelulasEl)
                 celulaEl.style.cursor = 'auto';
