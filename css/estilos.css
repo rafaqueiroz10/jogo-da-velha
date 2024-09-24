@@ -53,14 +53,14 @@ main {
     font-size: 2em;
 }
 
-#botao-dois-jogadores, 
+/*#botao-dois-jogadores,*/ 
 #comecar {
-    width: 11em;
-    height: 4em;
+    width: 10em;
+    height: 3em;
     background-color: #d9d9d9;
     border-radius: 2vh;
     border: 0.4vh solid #00bf63;
-    font-size: 5vh;
+    font-size: 4.5vh;
     cursor: pointer;
     color:chocolate;
 }
@@ -84,7 +84,37 @@ main .ocultar {
 
 .comecar-jogo {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 4em;
     height: 40em;
+}
+
+#img-qr-code {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 180px;
+    height: 180px;
+}
+
+#qr-code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#qr-code p {
+    color: rgb(54, 52, 52);
+    font-size: 17.5px;
+}
+
+@media (width <= 900px) {
+    #qr-code {
+        margin-left: 5%;
+    }
+    #comecar {
+        margin-right: 5%;
+    }
 }
