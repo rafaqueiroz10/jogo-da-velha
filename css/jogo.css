@@ -124,11 +124,9 @@
 }
 
 .marcar-opcao {
-    background-color: rgba(209, 200, 200, 0.937);
-    border-radius: 1vh 1vh;
+    border: 2px dotted black;
     height: 1.4em;
-    padding-left: 1vh;
-    padding-right: 1vh;
+    border-radius: 4px;
 }
 
 .modal-vs-amigo {
@@ -154,7 +152,7 @@
 #jogador-um,
 #jogador-dois {
     display: flex;
-    gap: 1.5vh;
+    gap: 2vh;
     font-size: 7vh;
     cursor: pointer;
 }
@@ -286,6 +284,9 @@
 @media (width <= 767px) {
     #comecar {
         width: 50%;
+    }
+    #qr-code {
+        display: none;   
     }
 }
 
