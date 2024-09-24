@@ -261,7 +261,7 @@ function jogo(e) {
     }
 
     // função que incrementa o número de vitorias da peça vencedora
-    function contarVitoria(pecaVencedora) {
+    function setVitorias(pecaVencedora) {
         if (pecaVencedora === 'O') {
             vitoriasBolinha++;
             vitoriasBolinhaEl.innerHTML = vitoriasBolinha;
@@ -272,10 +272,9 @@ function jogo(e) {
         }
     }
 
-    // função para verificar o empate
     function empate() {
-        for (let celulaEl of arrCelulasEl)
-            if (celulaEl.innerHTML === '')
+        for(let celulaEl of arrCelulasEl)
+            if(celulaEl.innerHTML === ' ')
                 return false;
 
         return true;
@@ -302,7 +301,7 @@ function jogo(e) {
     if (temVencedor || empate()) {
         if (temVencedor) {
             let vencedor = vez;
-            contarVitoria(vencedor);
+            setVitorias(vencedor);
         }
         tempoDeAtraso = (temVencedor) ? 5000 : 50;
         configuracoes.botaoAbrirEl.classList.add('hidden');
