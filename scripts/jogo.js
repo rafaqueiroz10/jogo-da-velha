@@ -272,7 +272,7 @@ function setVitorias(pecaVencedora) {
 
 function empate() {
     for(let celulaEl of arrCelulasEl)
-        if(celulaEl.innerHTML === ' ')
+        if(celulaEl.innerHTML === '')
             return false;
 
     return true;
